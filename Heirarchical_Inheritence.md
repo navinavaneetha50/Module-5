@@ -31,6 +31,70 @@ To write a Python program that uses **Hierarchical Inheritance** to input and di
 5. Display collected information using class methods.
 
 ## Program
-Add code here
+```
+class Details:
+    def get_details(self, id, name, gender):
+        self.id = id
+        self.name = name
+        self.gender = gender
+
+class Employee(Details):
+    def get_emp(self, company, department):
+        self.company = company
+        self.department = department
+
+    def display_emp(self):
+        print("Employee Object")
+        print("Id: ", self.id)
+        print("Name: ", self.name)
+        print("Gender: ", self.gender)
+        print("Company: ", self.company)
+        print("Department: ", self.department)
+        print()
+
+class Doctor(Details):
+    def get_doc(self, hospital, department):
+        self.hospital = hospital
+        self.department = department
+
+    def display_doc(self):
+        print("Doctor Object")
+        print("Id: ", self.id)
+        print("Name: ", self.name)
+        print("Gender: ", self.gender)
+        print("Hospital: ", self.hospital)
+        print("Department: ", self.department)
+
+# Main program
+# Employee details
+id1 = int(input())
+name1 = input()
+gender1 = input()
+company = input()
+department1 = input()
+
+# Doctor details
+id2 = int(input())
+name2 = input()
+gender2 = input()
+hospital = input()
+department2 = input()
+
+emp = Employee()
+emp.get_details(id1, name1, gender1)
+emp.get_emp(company, department1)
+
+doc = Doctor()
+doc.get_details(id2, name2, gender2)
+doc.get_doc(hospital, department2)
+
+emp.display_emp()
+doc.display_doc()
+```
 ## Sample Output
+<img width="1176" height="481" alt="image" src="https://github.com/user-attachments/assets/90a80217-1593-4ea8-bf39-2034f2437762" />
+
+Result 
+The program is executed
+
 
